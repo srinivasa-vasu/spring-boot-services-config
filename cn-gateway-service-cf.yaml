@@ -1,15 +1,15 @@
 service:
-  protocol: lb
+  protocol: http
 spring:
   cloud:
     gateway:
       routes:
       - id: city_service
-        uri: lb://cn-city-service
+        uri: http://cn-city-service
         predicates:
           - Path=/v1/cities/**
       - id: weather_service
-        uri: lb://cn-weather-service
+        uri: http://cn-weather-service
         predicates:
           - Path=/v1/weather/**
     cloudfoundry:
@@ -20,7 +20,7 @@ spring:
       # space: 
       discovery:
         use-dns: true
-        default-server-port: 61001
-        use-container-ip: false
+        default-server-port: 8080
+        use-container-ip: true
         enabled: true
         internal-domain: apps.internal
