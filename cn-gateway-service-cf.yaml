@@ -21,6 +21,6 @@ spring:
       discovery:
         use-dns: true
         default-server-port: 61001
-        use-container-ip: false
+        use-container-ip: true
         enabled: true
         internal-domain: apps.internal
