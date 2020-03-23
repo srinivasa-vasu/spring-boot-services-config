@@ -1,5 +1,5 @@
 service:
-  protocol: http
+  protocol: lb
 spring:
   cloud:
     gateway:
@@ -12,6 +12,10 @@ spring:
         uri: lb://cn-weather-service
         predicates:
           - Path=/v1/weather/**
+      - id: gateway_service
+        uri: lb://cn-gateway-service
+        predicates:
+          - Path=/**          
     cloudfoundry:
       # url: 
       # username: 
