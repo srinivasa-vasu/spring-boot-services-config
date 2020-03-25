@@ -10,8 +10,8 @@ management:
         api-token: <tbf>
         uri: <tbf>
         step: 30s
-        global-prefix: gateway-service
-        source: gateway-service
+        global-prefix: hm-gateway-service
+        source: hm-gateway-service
     distribution:
       percentiles-histogram:
         resilience4j:
