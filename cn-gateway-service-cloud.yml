@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    circuitbreaker:
+      resilience4j:
+        enabled: false
+management:
+  metrics:
+    export:
+      wavefront:
+        api-token: <tbf>
+        uri: <tbf>
+        step: 30s
+        global-prefix: gateway-service
+        source: gateway-service
+    distribution:
+      percentiles-histogram:
+        resilience4j:
+          circuitbreaker:
+            calls: true
