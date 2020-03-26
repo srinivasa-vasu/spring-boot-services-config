@@ -7,8 +7,8 @@ spring:
   cloud:
     discovery:
       enabled: true
-    blocking:
-      enabled: false
+      blocking:
+        enabled: false
     gateway:
       discovery:
         # locator:
