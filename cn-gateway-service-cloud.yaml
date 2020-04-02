@@ -3,17 +3,17 @@ spring:
     circuitbreaker:
       resilience4j:
         enabled: false
-#management:
-#  metrics:
-#    export:
-#      wavefront:
-#        api-token: <tbf>
-#        uri: <tbf>
-#        step: 30s
-#        global-prefix: hm-gateway-service
-#        source: hm-gateway-service
-#    distribution:
-#      percentiles-histogram:
-#        resilience4j:
-#          circuitbreaker:
-#            calls: true
+management:
+  metrics:
+    export:
+      wavefront:
+        api-token: <tbf>
+        uri: <tbf>
+        step: 30s
+        global-prefix: hm-gateway-service
+        source: hm-gateway-service
+    distribution:
+      percentiles-histogram:
+        resilience4j:
+          circuitbreaker:
+            calls: true
