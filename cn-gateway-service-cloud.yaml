@@ -7,8 +7,8 @@ management:
   metrics:
     export:
       wavefront:
-        api-token: <tbf>
-        uri: <tbf>
+#        api-token: <tbf>
+#        uri: <tbf>
         step: 30s
         global-prefix: hm-gateway-service
         source: hm-gateway-service
